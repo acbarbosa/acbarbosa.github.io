@@ -1,4 +1,20 @@
 .home {
   display: grid;
   grid-template-columns: auto 200px;
+  grid-template-rows: auto;
+  grid-template-areas: "main posts"
+                       "main adrs"
 }
+
+.main {
+  grid-area: main;
+}
+
+.posts {
+  grid-area: posts;
+}
+
+.adrs {
+  grid-area: adrs;
+}
+

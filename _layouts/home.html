@@ -4,45 +4,58 @@ layout: default
 
 <div class="home">
   <section class="main">
-    {%- if page.title -%}
+    {% if page.title %}
     <h1 class="page-heading">{{ page.title }}</h1>
-    {%- endif -%}
+    {% endif %}
 
     {{ content }}
   </section>
 
-
   <section class="posts">
     <h2 class="post-list-heading">Posts</h2>
     
-    {%- if site.posts.size > 0 -%}
+    {% if site.posts.size > 0 %}
     <ul class="post-list">
-      {%- for post in site.posts -%}
+      {% for post in site.posts %}
       <li>
         <a class="post-link" href="{{ post.url | relative_url }}">
           {{ post.title | escape }}
         </a>
       </li>
-      {%- endfor -%}
+      {% endfor %}
     </ul>
-    {%- endif -%}
+    {% endif %}
   </section>
 
   <section class="adrs">
     <h2 class="post-list-heading">ADRs</h2>
     
-    {%- if site.adrs.size > 0 -%}
+    {% if site.adrs.size > 0 %}
     <ul class="post-list">
-      {%- for adr in site.adrs -%}
+      {% for adr in site.adrs %}
       <li>
         <a class="post-link" href="{{ adr.url | relative_url }}">
           {{ adr.title | escape }}
         </a>
       </li>
-      {%- endfor -%}
+      {% endfor %}
     </ul>
-    {%- endif -%}
-
+    {% endif %}
   </section>
 
+  <section class="pds">
+    <h2 class="post-list-heading">PDs</h2>
+
+    {% if site.pds.size > 0 %}
+    <ul class="post-list">
+      {% for pd in site.pds %}
+      <li>
+        <a class="post-link" href="{{ pd.url | relative_url }}">
+          {{ pd.title | escape }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
 </div>

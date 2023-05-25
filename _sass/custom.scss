@@ -4,6 +4,7 @@
   grid-template-rows: auto;
   grid-template-areas: "main posts"
                        "main adrs"
+                       "main pds"
 }
 
 .main {
@@ -18,3 +19,6 @@
   grid-area: adrs;
 }
 
+.pds {
+  grid-area: pds;
+}

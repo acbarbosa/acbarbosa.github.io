@@ -37,3 +37,5 @@ plugins:
 collections:
   adrs:
     output: true
+  pds:
+    output: true
